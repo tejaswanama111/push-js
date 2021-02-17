@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="push.min.js"></script>
+<script src="serviceWorker.min.js"></script>
+<script>
+function start(){
+	Push.create("Tejawa Nama!", {
+		body: "How are you tejaswa nama?",
+		icon: 'https://tailblocks.cc/favicon.png',
+		timeout: 4000,
+		onClick: function () {
+			window.focus();
+			this.close();
+		}
+	});
+}
+
+function clear(){
+	Push.clear();
+}
+</script>
+<a href="javascript:void(0)" onclick="start()">Start</a>
+<a href="javascript:void(0)" onclick="clear()">Clear</a>
+</body>
+</html>
